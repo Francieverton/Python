@@ -1,14 +1,5 @@
-meta = 0.05
-taxa = 0
-rendeu = 0.30
+emails = ["francieverton@gmail.com", "yohanne@gmail.com", "carlos@hotemail.com", "nicole@com"]
 
-if rendeu > 0.20:
-    taxa = 0.04
-    print('Taxa de {}, pq o valor que rendeu é maior que 20%.'.format(taxa))
+gmails = [gmail for gmail in emails if gmail.endswith("@gmail.com")]
 
-elif rendeu > meta:
-    taxa = 0.02
-    print('Taxa de apenas {}.'.format(taxa))
-
-else:
-    print('sem taxa')
+print(gmails)
