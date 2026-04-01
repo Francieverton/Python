@@ -1,5 +1,11 @@
-emails = ["francieverton@gmail.com", "yohanne@gmail.com", "carlos@hotemail.com", "nicole@com"]
+cpf = input('Digite seu cpf (apenas números): ')
 
-gmails = [gmail for gmail in emails if gmail.endswith("@gmail.com")]
+cpf = cpf.strip()
+cpf = cpf.replace('.', '')
+cpf = cpf.replace('-', '')
 
-print(gmails)
+if len(cpf) == 11 and cpf.isnumeric():
+    print(cpf)
+
+else:
+    print('Formato de cpf inválido')
