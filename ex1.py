@@ -1,11 +1,12 @@
-cpf = input('Digite seu cpf (apenas números): ')
+nome = input('Digite seu primeiro nome: ')
+email = input('Digite seu melhor email: ')
 
-cpf = cpf.strip()
-cpf = cpf.replace('.', '')
-cpf = cpf.replace('-', '')
-
-if len(cpf) == 11 and cpf.isnumeric():
-    print(cpf)
+#vendo se tem o email é válido
+if nome and email:
+    pos_a = email.find('@')
+    servidor = email[pos_a:]
+    if pos_a != -1 and '.' in servidor:
+        print('Cadastro concluído!')
 
 else:
-    print('Formato de cpf inválido')
+    print('Digite as informações corretamente!')
